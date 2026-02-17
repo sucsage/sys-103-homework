@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Fixed</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            height: 100vh; 
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto 1fr 1fr auto; 
+            grid-template-areas: 
+                "Header  Header  Header Header"
+                "Sidebar Service Service rightbar"
+                "Sidebar body1 body2 rightbar"
+                "Sidebar  Footer Footer rightbar";
+            
+            gap: 10px;
+            div {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid red;
+                border-radius: 16px;
+                color: red;
+                
+            };
+        }
+
+        .box1 {
+            grid-area: Header;
+            padding: 20px;
+        }
+
+        .box2 {
+            grid-area: Service;
+        }
+
+        .box3 {
+            grid-area: Sidebar;
+        }
+
+        .box4 {
+            grid-area: body1;
+        }
+
+        .box5 {
+            grid-area: body2;
+        }
+
+        .box6 {
+            grid-area: rightbar;
+        }
+
+        .box7 {
+            grid-area: Footer;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+
+    <div class="container">
+        <div class="box1">Header</div>
+        <div class="box2">Service</div>
+        <div class="box3">Sidebar</div>
+        <div class="box4">body1</div>
+        <div class="box5">body2</div>
+        <div class="box6">rightbar</div>
+        <div class="box7">Footer</div>
+    </div>
+</body>
+
+</html>

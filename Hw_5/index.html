@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            height: 100vh;
+            gap: 0.5em;
+            grid-template-areas: "left right1"
+                "left right2"
+                "left right3"
+                "left right4";
+
+            div {
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+
+        .img1 {
+            background-image: url("https://images.unsplash.com/photo-1694875546238-67cb3596adf1?q=80&w=1336&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-position: center;
+            background-size: cover;
+            text-shadow: 1px 1px 0 #000;
+            grid-area: left;
+        }
+
+        .img2 {
+            font-size: 1.3em;
+            padding: 0.5em;
+            background-image: url("https://i0.wp.com/www.iurban.in.th/wp-content/uploads/2018/04/ikeabangyai-iurban-1.jpg");
+            background-position: center;
+            background-size: cover;
+            text-shadow: 1px 1px 0 #000;
+            grid-area: right1;
+        }
+
+        .img3 {
+            font-size: 1.3em;
+            padding: 0.5em;
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/72/IKEA_Shopping_centre_Sweden.jpg");
+            background-position: center;
+            background-size: cover;
+            text-shadow: 1px 1px 0 #000;
+            grid-area: right2;
+        }
+
+        .img4 {
+            font-size: 1.3em;
+            padding: 0.5em;
+            background-image: url("https://cdn.shopify.com/s/files/1/0876/7291/4213/files/Ikea_key_success_02.jpg?v=1738140357");
+            background-position: center;
+            background-size: cover;
+            text-shadow: 1px 1px 0 #000;
+            grid-area: right3;
+        }
+
+        .img5 {
+            font-size: 1.3em;
+            padding: 0.5em;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaGzS-6CDMGFh0TrP2VH3mDroVTdfT7heK3Q&s");
+            background-position: center;
+            background-size: cover;
+            text-shadow: 1px 1px 0 #000;
+            grid-area: right4;
+        }
+
+        .box-yellow {
+            display: flex;
+            padding: 0;
+            width: 100%;
+
+            div {
+                font-size: 0.9em;
+                padding: 1em;
+            }
+        }
+
+        .box-yellow .left {
+            width: 30%;
+            border-radius: 16px 0px 0px 16px;
+            background-color: #F8E211;
+        }
+
+        .box-yellow .right {
+            width: 65%;
+            border-radius: 0 16px 16px 0;
+            background-color: rgba(208, 189, 57, 0.8);
+
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 95%;
+        }
+
+        footer {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            gap: 0.5em;
+        }
+
+        footer p {
+            font-size: x-large;
+        }
+
+        .padding-left {
+            padding-left: 1.5em;
+        }
+
+        .ikea-style {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 200px;
+            font-weight: bold;
+            color: #FFDA1A;
+            /* สีเหลือง IKEA */
+            /* สีน้ำเงิน IKEA (เผื่ออยากได้พื้นหลัง) */
+            display: inline-block;
+            letter-spacing: -2px;
+            margin-top: -40px;
+            /* ปรับให้ตัวอักษรชิดกันเหมือนในรูป */
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 600px) {
+
+            .ikea-style {
+                font-size: 150px;
+                margin-top: -30px;
+            }
+
+            .container {
+                height: 100vh;
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "left"
+                    "right1"
+                    "right2"
+                    "right3"
+                    "right4";
+
+                /* 👇 กำหนดความสูงแต่ละแถว */
+                grid-template-rows:
+                    50vh
+                    /* img1 */
+                    12.5vh
+                    /* img2 */
+                    12.5vh
+                    /* img3 */
+                    12.5vh
+                    /* img4 */
+                    12.5vh;
+            }
+        
+
+        }
+    </style>
+    <div class="container">
+        <div class="img1">
+            <main>
+                <h1 class="ikea-style">IKEA</h1>
+
+                <footer>
+                    <p>Go shopping on your local site</p>
+
+                    <div class="padding-left">⭣</div>
+                    <div class="box-yellow">
+                        <div class="left">Go to</div>
+                        <div class="right">ikea.us</div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+        <div class="img2">IKEA Today</div>
+        <div class="img3">About IKEA</div>
+        <div class="img4">IKEA Museum</div>
+        <div class="img5">IKEA at H22</div>
+    </div>
+</body>
+
+</html>

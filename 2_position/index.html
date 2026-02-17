@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css positon</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            color: #fff;
+            /* border-radius: 12px;
+            font-size: 2rem; */
+            text-align: center;
+        }
+
+        div.box1 {
+            position: relative;
+            top: 13em;
+            left: 13em;
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+        }
+
+        div.box2 {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            z-index: 1;
+            background-color: green;
+            line-height: 30px;
+        }
+        body {
+            border: 2px solid black;
+            height: 2000px;
+        }
+        nav{
+            background-color: pink;
+            position: sticky;
+            top: 0;
+        }
+        .action_button {
+            position: sticky;
+            top: 90vh;
+            left: 80vw;
+            background: yellowgreen;
+            width: 3em;
+            height: 3em;
+            border-radius: 100%;
+            text-align: center;
+            font-weight: bolder;
+            line-height: 3em;
+            box-shadow: 2px 2px 2px black;
+        }
+    </style>
+    <nav>My nav</nav>
+    <div id="box1" class="box1">1
+        <div class="box2">2</div>
+    </div>
+    <div class="action_button"><a href="#box1">Home</a></div>
+</body>
+
+</html></a>

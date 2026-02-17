@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div.banner {
+            position: relative;
+            top: 3em;
+            left: 3em;
+            background: #3ebf14;
+            width: 500px;
+            height: 200px;
+            text-align: center;
+        }
+        div.cyc{
+            position: absolute;
+            width: 100px;
+            height: 90px;
+            z-index: 1;
+            background: white;
+        }
+        div.cyc1 {
+            border-radius: 20em;
+            top: 50%;
+            transform: translate(0,-50%);
+            left: -60px;
+        }
+        div.cyc2 {
+            border-radius: 36px;
+            bottom: -50px;
+            right: -30px;
+        }
+        h1{
+            position: absolute;
+            left: 50%;
+            top: -20px;
+            transform: translate(-50%,0);
+            background: lightblue;
+            padding: 0.4em 0.35em;
+            font-size: 1.5em;
+            border: 2px solid black;
+        }
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            font-size: 1.5em;
+            border: 0.1em dotted white;
+            padding: 0.5em;
+        }
+        button {
+            position: absolute;
+            background-color: ghostwhite;
+            color: black;
+            padding: 5px;
+            right: 0;
+        }
+    </style>
+    <div class="banner">
+        <h1 >Banner</h1>
+        <button class="close">X</button>
+        <div class="cyc cyc1"></div>
+        <div class="cyc cyc2"></div>
+        <span class="text">This is css position</span>
+    </div>
+</body>
+</html>
