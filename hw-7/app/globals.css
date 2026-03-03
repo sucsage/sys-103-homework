@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+/* @import "tailwindcss"; */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hw_6</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <style>
         * {
             margin: 0;
             padding: 0;
@@ -226,79 +216,3 @@
                 text-align: center;
             }
         }
-    </style>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="./image.svg" width="30" alt="home icon">
-                <h1>CoC</h1>
-            </div>
-            <ul id="bar" class="bar" onclick='Togglebar()'>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <ul class="content-bar" id="content-bar" onclick="Togglebar()">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-    </header>
-    <hr />
-    <main>
-        <section>
-            <div class="section-1">
-                <div class="section-1-text">
-                    <div class="section-1-header">
-                        <h4>Lorem ipsum dolor</h4>
-                        <h2>WE ARE THE BEST</h2>
-                    </div>
-                    <p class="section-1-subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
-                        veniam? Alias, perferendis
-                        optio, voluptas qui quis illo eum rem voluptate quibusdam, libero in sunt rerum?</p>
-                    <button class="section-1-buttom">Join us now</button>
-                </div>
-            </div>
-        </section>
-        <hr />
-        <section>
-            <ul class="section-2">
-                <li>SERVICE 1</li>
-                <li>SERVICE 2</li>
-                <li>SERVICE 3</li>
-            </ul>
-        </section>
-        <hr />
-        <section>
-            <div class="section-3">
-                <div class="section-3-img1"></div>
-                <div class="section-3-img2"></div>
-                <div class="section-3-img3"></div>
-                <div class="section-3-img4"></div>
-            </div>
-        </section>
-    </main>
-    <hr />
-
-    <footer>
-        <h2>Lorem ipsum dolor sit amet</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem recusandae</p>
-        <h3>Copyright C ALL Right Reserved</h3>
-    </footer>
-    <script>
-        const Togglebar = () => {
-            const element = document.getElementById("bar");
-            const target = document.getElementById("content-bar")
-            if (window.innerWidth <= 600) {
-                if (!target.style.display) {
-                    target.style.display = 'block'
-                } else {
-                    target.style.display = ''
-                }
-            }
-        }
-    </script>
-</body>
-
-</html>
